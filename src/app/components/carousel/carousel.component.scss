@@ -1,0 +1,33 @@
+.p-carousel-container{
+    background-color: var(--gray-100);
+    border-radius: 0.5rem;
+    .p-carousel-items-container{
+        display: flex;
+        align-items: center;
+    }
+}
+.p-carousel .p-carousel-content .p-carousel-prev, .p-carousel .p-carousel-content .p-carousel-next{
+    color: var(--red-header);
+}
+.p-carousel .p-carousel-indicators .p-carousel-indicator.p-highlight button{
+    background-color: var(--red-header);
+}
+.product-item{
+    &-content{
+        padding-top: 0.5rem;
+        .image{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            img{
+                border-radius: 0.5rem;
+            }
+        }
+        .name{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-family: 'Times New Roman', Times, serif;
+        }
+    }
+}

@@ -1,0 +1,83 @@
+<app-header></app-header>
+<app-nav></app-nav>
+<div class="home">
+    <div class="home-content grid">
+        <div class="col-6" routerLink="form">
+            <div class="icon-home-left" routerLink="form">
+                <img src="assets/images/icon.png" alt="icon-home">
+            </div>
+            <div class="home-text-left">
+                <span>Soluciones</span><br>
+                <span>Mi negocio</span>
+            </div>
+        </div>
+        <div class="col-6 col-offset-3">
+            <app-my-daviplata></app-my-daviplata>
+        </div>
+        <div class="col-6">
+            <div class="home-text-right">
+                <span>Topes</span>
+            </div>
+            <div class="icon-home-right">
+                <img src="assets/images/icon2.png" alt="icon-home">
+            </div>
+        </div>
+    </div>
+    <div class="products">
+        <p-card header="Vender" subheader="Elija una opción para recibir el pago de su venta">
+            <div class="grid">
+                <div class="col-6">
+                    <div class="image">
+                        <img src="assets/images/qr.png" alt="qr">
+                    </div>
+                    <div class="text">
+                        <span>
+                            Código QR
+                        </span>
+                    </div>
+                </div>
+                <div class="col-6">
+                    <div class="image">
+                        <img src="assets/images/pse.png" alt="pse">
+                    </div>
+                    <div class="text">
+                        <span>
+                            Enlace de pago
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </p-card>
+    </div>
+    <div class="benefits-card">
+        <p-card routerLink="benefits">
+            <div class="grid" >
+                <div class="col-4">
+                    <img src="assets/images/benefits.png" alt="benefits">
+                </div>
+                <div class="col-8">
+                    <div class="title">
+                        <h4>Más ingresos para su negocio</h4><br>
+                        <span>Conozca los beneficios</span>
+                    </div>
+                </div>
+            </div>
+        </p-card>
+    </div>
+    <div class="carousel">
+        <div class="grid">
+            <div class="col-6">
+                <h3>Catálogos</h3>
+            </div>
+            <div class="col-6">
+                <i class="pi pi-plus-circle"></i>
+                <h5>Nuevo catálogo</h5>
+            </div>
+        </div>
+        <div class="grid">
+            <div class="col-12">
+                <app-carousel></app-carousel>
+            </div>
+        </div>
+    </div>
+</div>

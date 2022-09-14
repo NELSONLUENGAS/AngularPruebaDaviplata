@@ -1,0 +1,110 @@
+.form{
+    padding: 1rem;
+    padding-bottom: 2rem;
+    background-color: #dee2e6;
+    .p-card{
+        background-color: var(--surface-900);
+        color: var(--primary-color-text);
+        position: relative;
+        font-family: 'Times New Roman', Times, serif;
+        .item-2{
+            .p-inputtext{
+                color: var(--primary-color-text);
+                font-family: 'Times New Roman', Times, serif;
+                background: transparent;
+                width: 100%;
+                border-radius: 0;
+                border: none;
+                border-bottom: solid 1px var(--gray-200);
+                padding: 0;
+                padding-top: 1rem;
+                &:enabled:focus{
+                    box-shadow: none;
+                }
+            }
+        }
+        .p-dropdown{
+            background-color: transparent;
+            color: var(--primary-color-text);
+            font-family: 'Times New Roman', Times, serif;
+            width: 100%;
+            border-radius: 0;
+            border: none;
+            border-bottom: solid 1px var(--gray-200);
+            padding: 0;
+            &:not(.p-disabled).p-focus{
+                box-shadow: none;
+            }
+            .p-dropdown-label{
+                color: var(--primary-color-text);
+                font-family: 'Times New Roman', Times, serif;
+            }
+            .p-dropdown-trigger{
+                color: var(--primary-color-text);
+            }
+        }
+        .p-dropdown-panel{
+            background-color: var(--gray-200);
+            border: none;
+            font-family: 'Times New Roman', Times, serif;
+            .p-dropdown-item{
+                color: var(--primary-color-text);
+            }
+        }
+        .p-inputtext{
+            color: var(--primary-color-text);
+            font-family: 'Times New Roman', Times, serif;
+            background: transparent;
+            width: 100%;
+            border-radius: 0;
+            border: none;
+            border-bottom: solid 1px var(--gray-200);
+            padding: 0;
+            padding-top: 1rem;
+            &:enabled:focus{
+                box-shadow: none;
+            }
+        }
+        p-inputnumber, .p-inputnumber{
+            width: 100%;
+        }
+        .p-autocomplete{
+            width: 100%;
+        }
+        .p-autocomplete-panel{
+            background-color: var(--gray-200);
+            border: none;
+            font-family: 'Times New Roman', Times, serif;
+            .p-autocomplete-item{
+                color: var(--primary-color-text);
+            }
+        }
+        .item-6{
+            .col-1{
+                display: flex;
+                justify-content: center;
+                align-items: flex-end;
+            }
+        }
+        .item-8{
+            position:relative;
+            i{
+                position: absolute;
+                bottom: 2rem;
+                color: var(--red-header);
+            }
+        }
+        .item-9{
+            position: absolute;
+            bottom: -2rem;
+            left: calc(50% - 2rem);
+            .p-button{
+                background-color: var(--red-header);
+            }
+            .p-disabled, .p-component:disabled{
+                opacity: 1;
+                background-color: var(--gray-700);
+            }
+        }
+    }
+}

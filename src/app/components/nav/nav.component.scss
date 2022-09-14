@@ -1,0 +1,24 @@
+.nav{
+    overflow: hidden;
+    .grid{
+        background-color: var(--surface-800);
+        .col-6{
+            display: flex;
+            justify-content: left;
+            align-items: center;
+            padding: 1.2rem;
+            padding-bottom: 1rem;
+            i{
+                font-size: 1.2rem;
+                color: var(--primary-color-text);
+                .p-badge{
+                    background-color: var(--red-header);
+                }
+            }
+            &:nth-child(2){
+                justify-content: right;
+                align-items: center;
+            }
+        }
+    }
+}

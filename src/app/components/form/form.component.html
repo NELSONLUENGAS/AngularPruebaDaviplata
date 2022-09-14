@@ -1,0 +1,74 @@
+<app-header></app-header>
+<div class="form">
+    <p-card>
+        <form [formGroup]="formMyDaviplata">
+            <div class="grid">
+                <div class="item-1 col-12">
+                    <h3>Ingrese los siguientes datos</h3>
+                </div>
+                <div class="item-2 col-12">
+                    <h4>Escriba su nombre completo</h4>
+                    <input type="text" pInputText formControlName="name">
+                    <small class="p-error block" *ngIf="form['name'].invalid && isSubmitted">Campo obligatorio</small>
+                </div>
+                <div class="item-3 col-12">
+                    <h4>Seleccione tipo de documento</h4>
+                    <p-dropdown [options]="documentTypes" formControlName="document" placeholder="Seleccione" optionLabel="name" optionValue="name"></p-dropdown>
+                    <small class="p-error block" *ngIf="form['document'].invalid && isSubmitted">Campo obligatorio</small>
+                </div>
+                <div class="item-4 col-12">
+                    <label for="docNumber">
+                        <h4>Escriba el número de documento</h4>
+                    </label>
+                    <p-inputNumber formControlName="docNumber" mode="decimal" inputId="docNumber" [useGrouping]="false"></p-inputNumber>
+                    <small class="p-error block" *ngIf="form['docNumber'].invalid && isSubmitted">Campo obligatorio</small>
+                </div>
+                <div class="item-5 col-12">
+                    <h4>Escriba ciudad o municipio</h4>
+                    <p-autoComplete formControlName="city" [showEmptyMessage]="true" [suggestions]="filteredCountries" (completeMethod)="filterCountry($event)" field="name" [minLength]="1"></p-autoComplete>
+                    <small class="p-error block" *ngIf="form['city'].invalid && isSubmitted">Campo obligatorio</small>
+                </div>
+                <div class="item-6 col-12">
+                    <h4>¿Cuál es su dirección?</h4>
+                    <div class="grid">
+                        <div class="col-4">
+                            <p-dropdown [options]="addressTypes" formControlName="addressType" placeholder="Seleccione" optionLabel="name" optionValue="name"></p-dropdown>
+                        </div>
+                        <div class="col-2">
+                            <input type="text" pInputText formControlName="number">
+                        </div>
+                        <div class="col-1">
+                            <span>#</span>
+                        </div>
+                        <div class="col-2">
+                            <p-inputNumber formControlName="number1" mode="decimal" inputId="docNumber" [useGrouping]="false"></p-inputNumber>
+                        </div>
+                        <div class="col-1">
+                            <span>-</span>
+                        </div>
+                        <div class="col-2">
+                            <p-inputNumber formControlName="number2" mode="decimal" inputId="docNumber" [useGrouping]="false"></p-inputNumber>
+                        </div>
+                    </div>
+                    <small class="p-error block" *ngIf="(form['addressType'].invalid && isSubmitted) || (form['number'].invalid && isSubmitted) || (form['number1'].invalid && isSubmitted) || (form['number2'].invalid && isSubmitted) ">Todos los campos son obligatorios</small>
+                </div>
+                <div class="item-7 col-12">
+                    <h4>Local / Tienda / Barrio / Otro</h4>
+                    <input type="text" pInputText formControlName="option" placeholder="Opcional">
+                </div>
+                <div class="item-8 col-12">
+                    <label for="docNumber">
+                        <h4>Escriba el número de celular</h4>
+                    </label>
+                    <p-inputMask inputId="docNumber" formControlName="phone" mask="999-999-9999"></p-inputMask>
+                    <i *ngIf="form['phone'].value[0] !== '3' && !form['phone'].invalid" class="pi pi-info-circle"></i>
+                    <small class="p-error block" *ngIf="form['phone'].value[0] !== '3' && !form['phone'].invalid">El Número debe empezar con el 3</small>
+                    <small class="p-error block" *ngIf="form['phone'].invalid && isSubmitted">Campo obligatorio</small>
+                </div>
+                <div class="item-9 col-12">
+                    <button [disabled]="formMyDaviplata['invalid'] || form['phone'].value[0] !== '3' ? true : false" (click)="onSubmit()" pButton pRipple type="button" label="Crear" class="p-button-rounded" style="color: var(--surface-900); border: none; font-family: 'Times New Roman', Times, serif; font-size: 1.2rem;"></button>
+                </div>
+            </div>
+        </form>
+    </p-card>
+</div>

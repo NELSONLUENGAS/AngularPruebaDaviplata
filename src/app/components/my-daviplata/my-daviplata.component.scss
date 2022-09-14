@@ -1,0 +1,76 @@
+.my-daviplata{
+    // background-color: black;
+    width: 100%;
+    padding: 3rem;
+    .daviplata{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .circle{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        clip-path: circle(50% at 50% 50%);
+        background-color: var(--surface-900);
+        color: var(--primary-color-text);
+        width: 200px;
+        height: 200px;
+        .title{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            top: -2rem;
+        }
+        .price{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .description{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    }
+    .items{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 1rem;
+        padding-top: 1rem;
+        .mid-circle{
+            &-left{
+                .p-button{
+                    background-color: var(--red-header);
+                    font-size: 0.9rem;
+                    outline: none;
+                    border: none;
+                    font-family: 'Times New Roman', Times, serif;
+                }
+                .pi{
+                    font-size: 0.8rem;
+                }
+            }
+            &-right{
+                .p-button{
+                    background-color: var(--red-header);
+                    font-size: 0.9rem;
+                    outline: none;
+                    border: none;
+                    font-family: 'Times New Roman', Times, serif;
+                }
+                .pi{
+                    font-size: 0.8rem;
+                }
+            }
+        }
+    }
+    .person{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 1.5rem;
+    }
+}

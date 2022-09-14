@@ -1,0 +1,75 @@
+<app-header></app-header>
+<div class="benefits">
+    <p-card>
+        <div class="grid">
+            <div class="col-12">
+                <img src="assets/images/daviplata2.jpeg" alt="image" style="width: 100%; border-radius: 0.5rem;">
+            </div>
+        </div>
+    </p-card>
+    <div class="card">
+        <div class="item-1">
+            <h3>Beneficios y características</h3>
+        </div>
+        <div class="item-2">
+            <div class="grid">
+                <div class="col-2">
+                    <i class="pi pi-book"></i>
+                </div>
+                <div class="col-10">
+                    <p>
+                        Genere ingresos realizando compras en la tienda virtual y reciba entre el 2% y 4% en devolucion de la compra.
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="item-3">
+            <div class="grid">
+                <div class="col-2">
+                    <i class="pi pi-briefcase"></i>
+                </div>
+                <div class="col-10">
+                    <p>
+                        Aprenda a cómo posicionar su negocio en nuestra escuela.
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="item-4">
+            <div class="grid">
+                <div class="col-2">
+                    <i class="pi pi-sync"></i>
+                </div>
+                <div class="col-10">
+                    <p>Acceder a informes detallados de su botón de pagos.</p>
+                </div>
+            </div>
+        </div>
+        <div class="item-5">
+            <div class="grid">
+                <div class="col-2">
+                    <i class="pi pi-wallet"></i>
+                </div>
+                <div class="col-10">
+                    <p>Obten estos beneficios de manera gratis y sin algún costo.</p>
+                </div>
+            </div>
+        </div>
+        <div [class]="isSubmited && !checked? 'item-6-error' : 'item-6'">
+            <div class="grid">
+                <div class="col-2">
+                    <div class="field-checkbox">
+                        <p-checkbox [(ngModel)]="checked" [binary]="true" inputId="binary"></p-checkbox>
+                    </div>
+                </div>
+                <div class="col-10">
+                    <span>Autorizo el descuento por subscripción</span><br>
+                    <span>aceptando los <a>Terminos y Condiciones</a></span>
+                </div>
+            </div>
+        </div>
+        <div class="btn">
+            <button (click)="onSubmit()" pButton pRipple type="button" label="Contratar" class="p-button-rounded" style="background-color: var(--red-header) ; color: var(--surface-900); border: none; font-family: 'Times New Roman', Times, serif;"></button>
+        </div>
+    </div>
+</div>

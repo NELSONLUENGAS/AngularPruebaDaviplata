@@ -1,0 +1,15 @@
+<header>
+    <div class="header-content grid">
+        <div class="col-4" *ngIf="component !== undefined">
+            <i class="pi pi-arrow-left" (click)="navigate()"></i>
+        </div>
+        <div class="col-4" *ngIf="component === undefined">
+        </div>
+        <div class="col-4">
+            <img src="assets/images/logo.png" alt="logo-app">
+        </div>
+        <div class="col-4" >
+            <i class="pi pi-times"></i>
+        </div>
+    </div>
+</header>
